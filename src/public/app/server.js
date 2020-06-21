@@ -3,11 +3,11 @@ const http = require('http')
 const socketio = require('socket.io')
 const app = express()
 
-const { db } = require('./db/models')
+const { db } = require('../../db/models')
 // const models = require('./db/models')
 // const db = models.db
-const { usersRoute } = require('./routes/users')
-const { articlesRoute } = require('./routes/articles')
+const { usersRoute } = require('../../routes/users')
+const { articlesRoute } = require('../../routes/articles')
 
 const server = http.createServer(app)
 const io = socketio(server)
